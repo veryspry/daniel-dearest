@@ -63,7 +63,7 @@ func commandHandler(discord *discordgo.Session, message *discordgo.MessageCreate
 
 	sendMsg := parser(message.Content, message.Mentions)
 
-	fmt.Println("USER", message.Mentions[0].Discriminator)
+	// fmt.Println("USER", message.Mentions[0].Discriminator)
 
 	if sendMsg == true {
 		discord.ChannelMessageSend(message.ChannelID, imgURL)
